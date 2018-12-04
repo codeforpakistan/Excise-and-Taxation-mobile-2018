@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="accessoriesArray">
+        <item>ABS</item>
+        <item>Alloy Rims</item>
+        <item>Air Bags</item>
+        <item>Air Conditioning</item>
+        <item>AM/FM Radio</item>
+        <item>CD Player</item>
+        <item>Cassette Player</item>
+        <item>Cool Box</item>
+        <item>Cruise Control</item>
+        <item>Climate Control</item>
+        <item>DVD Player</item>
+        <item>Front Speaker</item>
+        <item>Front Camera</item>
+        <item>Heated Seats</item>
+        <item>Immobilizer Key</item>
+        <item>Keyless Entry</item>
+        <item>Navigator System</item>
+        <item>Power Locks</item>
+        <item>Power Mirror</item>
+        <item>Power Steering</item>
+        <item>Power Windows</item>
+        <item>Rear Seat Entertainment</item>
+        <item>Rear Speaker</item>
+        <item>Sun Roof</item>
+        <item>Steering Switches</item>
+        <item>USB &amp; Auxilary Cables</item>
+    </string-array>
+
+    <string-array name="seizedCategory">
+        <item>Number Plate Change</item>
+        <item>Suspious Car</item>
+        <item>Narcotics</item>
+        <item>Smuggled car</item>
+        <item>Other</item>
+    </string-array>
+
+</resources>

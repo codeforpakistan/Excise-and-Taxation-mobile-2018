@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/about_us"
+        android:icon="@drawable/ic_info_black_24dp"
+        android:title="About Us" />
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_exit_to_app_white_24dp"
+        android:title="Logout" />
+</menu>

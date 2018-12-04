@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".javaClasses.InspectorHomeActivity"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/home_bg" />
+
+            <ImageView
+                android:id="@+id/excise_logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/excise_logo"
+                android:visibility="visible"
+                android:layout_centerHorizontal="true"
+                android:transitionName="logo"/>
+
+            <TextView
+                android:id="@+id/home_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/excise_nmotor_vehicle_n_seize_amp_confiscation"
+                android:textSize="19sp"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:fontFamily="sans-serif"
+                android:layout_below="@+id/excise_logo" />
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/seize_veh_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/custom_btn2"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:text="@string/seize_vehicle"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true" />
+
+            <Button
+                android:id="@+id/vehicle_history_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/custom_btn"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:text="@string/vehicle_history"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/seize_veh_btn"
+                android:layout_marginTop="24dp"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    //inspector details
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@color/cardview_light_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="5dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/inspector_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="Muhammad Shahzaib"
+                android:gravity="center_horizontal"
+                android:textColor="#333"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:drawablePadding="5dp"
+                android:textAllCaps="true"
+                android:maxLines="1"/>
+
+            <TextView
+                android:id="@+id/inspector_position_under"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="Inspector"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:textSize="13sp"
+                android:maxLines="1"/>
+
+            <TextView
+                android:id="@+id/inspector_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:text=""
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:textSize="12sp"
+                android:maxLines="1"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </android.support.v7.widget.Toolbar>
+
+
+</RelativeLayout>

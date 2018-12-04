@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">EMVSCS</string>
+    <string name="password_hint">Password</string>
+    <string name="excise_nmotor_vehicle_n_seize_amp_confiscation">Excise  Motor Vehicle  \n Seizure &amp; Confiscation System</string>
+    <string name="seize_vehicle">Seize Vehicle</string>
+    <string name="vehicle_history">Seize History</string>
+    <string name="seize_history">Seize History</string>
+    <string name="title_activity_whm">WhmActivity</string>
+    <string name="tab_text_1">Awaiting</string>
+    <string name="tab_text_2">Checked In</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_whm_home">WhmHomeActivity</string>
+    <string name="form_b">Form B</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog"
+    android:background="@drawable/dialog_background"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/seize_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:id="@+id/dialog_text"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:textColor="#616161"
+        android:text="انتخاب کیجئے" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#616161"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:focusableInTouchMode="true">
+        <android.support.v7.widget.SearchView
+            android:id="@+id/seize_search_et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:closeIcon="@drawable/ic_cancel_black_24dp"
+            android:layout_gravity="right"
+            android:background="#dedede"
+            app:queryHint="Search..."
+            app:iconifiedByDefault="false"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.emvsc.excise.utilClasses.NonScrollListView
+                android:id="@+id/seize_cat_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null">
+
+            </com.emvsc.excise.utilClasses.NonScrollListView>
+            <Button
+                android:id="@+id/seize_done_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/custom_submit_btn"
+                android:textColor="@color/white"
+                android:text="Done"
+                android:layout_gravity="right"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"/>
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+
+</LinearLayout>

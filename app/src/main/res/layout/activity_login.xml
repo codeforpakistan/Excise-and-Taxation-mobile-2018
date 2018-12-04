@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".javaClasses.LoginActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/login_layout">
+        <ImageView
+            android:id="@+id/login_logo"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/excise_logo"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:scaleType="centerInside"
+            android:transitionName="logo"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp">
+
+            <TextView
+                android:id="@+id/cnic_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="CNIC No."
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/cnic_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_edit_text2"
+                android:hint="Enter CNIC No."
+                android:maxLength="13"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Password"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_edit_text2"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:hint="Enter Password"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+        <CheckBox
+            android:id="@+id/remember_ch"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="8dp"
+            android:text="Remember me"
+            android:textSize="14sp"
+            android:checked="true"
+            android:visibility="visible"
+            android:layout_marginLeft="30dp"/>
+
+
+
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/custom_btn"
+        android:text="Login"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"/>
+
+
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>
