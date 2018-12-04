@@ -55,6 +55,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import okhttp3.OkHttpClient;
 import retrofit2.Call;
@@ -73,6 +74,7 @@ public class SplashActivity extends AppCompatActivity {
     Retrofit retrofit;
     RelativeLayout splash_layout;
     Snackbar mSnackbar;
+    private Disposable internetDisposable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,8 +105,8 @@ public class SplashActivity extends AppCompatActivity {
                 .initialInterval(3000)
                 .interval(6000)
                 .build();
-        ReactiveNetwork
-                .checkInternetConnectivity()
+        internetDisposable = ReactiveNetwork
+                .observeInternetConnectivity(settings)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(isConnected -> {
@@ -463,7 +465,18 @@ public class SplashActivity extends AppCompatActivity {
     }
 
 
+    @Override protected void onPause() {
+        super.onPause();
+        safelyDispose(internetDisposable);
+    }
 
+    private void safelyDispose(Disposable... disposables) {
+        for (Disposable subscription : disposables) {
+            if (subscription != null && !subscription.isDisposed()) {
+                subscription.dispose();
+            }
+        }
+    }
     /*
     private boolean isNetworkAvailable() {
         */

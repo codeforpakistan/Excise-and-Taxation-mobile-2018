@@ -13,5 +13,4 @@ import retrofit2.http.GET;
 public interface AccessoriesApi {
     @GET(Config.AccessoriesList)
     Call<Accessories> getAccessories();
-    //sjldjadjjsd
 }
