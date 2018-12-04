@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/model_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#818181"
+            android:visibility="gone"
+            android:focusable="false"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/model_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_gray"
+            android:text="Peshawar"
+            android:focusable="false"
+            android:visibility="visible"
+            android:layout_centerInParent="true"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:paddingLeft="5dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e2e1e1"
+            android:layout_marginLeft="30dp"
+            android:focusable="false"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

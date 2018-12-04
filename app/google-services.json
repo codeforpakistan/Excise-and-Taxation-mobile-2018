@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "299909492924",
+    "firebase_url": "https://excise-and-taxation.firebaseio.com",
+    "project_id": "excise-and-taxation",
+    "storage_bucket": "excise-and-taxation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:299909492924:android:914ec26c67046e0b",
+        "android_client_info": {
+          "package_name": "com.emvsc.excise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "299909492924-dk4vkumtv6tnpuvprov141fltt0jmrot.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDn5--Oy3bnv34k4hN5SaNz2YraF-rG64U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

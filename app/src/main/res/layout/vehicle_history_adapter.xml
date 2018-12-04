@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp">
+    <LinearLayout
+        android:id="@+id/date"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:textColor="#747490"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:maxLength="2"/>
+        <TextView
+            android:id="@+id/month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apr"
+            android:textColor="#747490"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:maxLength="3"/>
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2018"
+            android:textColor="#747490"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:maxLength="4"/>
+
+    </LinearLayout>
+    <View
+        android:id="@+id/date_seprator"
+        android:layout_width="2dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/date"
+        android:background="#e0e0e0"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/date_seprator"
+        android:layout_marginLeft="16dp"
+        android:layout_centerVertical="true">
+        <TextView
+            android:id="@+id/form_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Form A # 9297"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp">
+            <TextView
+                android:id="@+id/seize_cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Narcotics"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/more_details"
+                android:paddingRight="16dp"/>
+            <ImageView
+                android:id="@+id/more_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/right_icon"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp">
+            <TextView
+                android:id="@+id/district"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peshawar"
+                android:layout_marginTop="8dp"
+                android:textSize="14sp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/time"
+                android:paddingRight="16dp"/>
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11:08 AM"
+                android:layout_marginTop="8dp"
+                android:textSize="14sp"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="#e0e0e0"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"/>
+
+</RelativeLayout>

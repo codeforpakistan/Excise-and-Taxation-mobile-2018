@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/date"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/inspector_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:textColor="#747490"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:maxLength="2"/>
+        <TextView
+            android:id="@+id/inspector_month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apr"
+            android:textColor="#747490"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:maxLength="3"/>
+        <TextView
+            android:id="@+id/inspector_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2018"
+            android:textColor="#747490"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:maxLength="4"/>
+        <TextView
+            android:id="@+id/inspector_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11:08 AM"
+            android:textSize="14sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:textColor="#747490"/>
+
+    </LinearLayout>
+    <View
+        android:id="@+id/date_seprator"
+        android:layout_width="2dp"
+        android:layout_height="100dp"
+        android:layout_toRightOf="@+id/date"
+        android:background="#e0e0e0"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_centerVertical="true"/>
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/date_seprator"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/inspector_form_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Form A # 9297"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle=""/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp">
+            <TextView
+                android:id="@+id/inspector_chasis_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chasis # AB4808"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/more_details"
+                android:paddingRight="16dp"/>
+            <ImageView
+                android:id="@+id/more_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/right_icon"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp">
+            <TextView
+                android:id="@+id/inspector_seize_cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Narcotics"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/time"
+                android:paddingRight="16dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:id="@+id/inspector_eto_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Eto Nowshera"
+                android:textSize="14sp"
+                android:layout_alignParentLeft="true"
+                android:paddingRight="16dp"
+                android:inputType="textCapWords" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="#e0e0e0"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"/>
+
+</RelativeLayout>
