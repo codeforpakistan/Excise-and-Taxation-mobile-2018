@@ -1797,13 +1797,13 @@ public class SeizeActivity extends AppCompatActivity implements View.OnClickList
             engine_no_label.setTextColor(getResources().getColor(android.R.color.holo_red_light));
             vehicle_engine_no.setBackground(getResources().getDrawable(R.drawable.error_layout2));
 
-        }else if (TextUtils.isEmpty(vehRegNo)){
-            vehicle_reg_label.setError(null);
+        }/*else if (TextUtils.isEmpty(vehRegNo)){
+            *//*vehicle_reg_label.setError(null);
             vehicle_reg_label.requestFocus();
             vehicle_reg_label.setTextColor(getResources().getColor(android.R.color.holo_red_light));
-            vehicle_reg_no.setBackground(getResources().getDrawable(R.drawable.error_layout2));
+            vehicle_reg_no.setBackground(getResources().getDrawable(R.drawable.error_layout2));*//*
 
-        }else if (TextUtils.isEmpty(vehRegDistrict)){
+        }*/else if (TextUtils.isEmpty(vehRegDistrict)){
             vehicle_reg_district_label.setError(null);
             vehicle_reg_district_label.requestFocus();
             vehicle_reg_district_label.setTextColor(getResources().getColor(android.R.color.holo_red_light));
@@ -1984,7 +1984,6 @@ public class SeizeActivity extends AppCompatActivity implements View.OnClickList
                     form2.setVisibility(View.VISIBLE);
                     form2.startAnimation(LeftSwipe);
                     stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.TWO);
-                    vehicle_reg_no.requestFocus();
                     scroll.scrollTo(0,0);
                     vehicle_chasis_no.requestFocus();
                     Date currentTimeStamp = Calendar.getInstance().getTime();

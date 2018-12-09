@@ -106,7 +106,7 @@ public class SplashActivity extends AppCompatActivity {
                 .interval(6000)
                 .build();
         internetDisposable = ReactiveNetwork
-                .observeInternetConnectivity(settings)
+                .observeInternetConnectivity()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(isConnected -> {
@@ -467,7 +467,13 @@ public class SplashActivity extends AppCompatActivity {
 
     @Override protected void onPause() {
         super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
         safelyDispose(internetDisposable);
+
     }
 
     private void safelyDispose(Disposable... disposables) {
@@ -477,6 +483,9 @@ public class SplashActivity extends AppCompatActivity {
             }
         }
     }
+
+
+
     /*
     private boolean isNetworkAvailable() {
         */

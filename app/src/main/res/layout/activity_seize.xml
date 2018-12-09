@@ -80,7 +80,7 @@
                         android:background="@drawable/custom_edit_text2"
                         android:hint="Enter Form No."
                         android:inputType="number"
-                        android:maxLength="4"
+                        android:maxLength="5"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
                         android:textSize="14sp"
@@ -569,7 +569,7 @@
                         android:background="@drawable/custom_edit_text2"
                         android:hint="Enter Squad No."
                         android:imeOptions="actionDone"
-                        android:inputType="number"
+                        android:inputType="text"
                         android:maxLines="1"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
@@ -786,7 +786,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:visibility="gone">
                     //for date
 
                     <LinearLayout
@@ -1480,9 +1481,9 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
                 android:orientation="vertical"
-                android:visibility="gone"
-                android:layout_marginTop="10dp">
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1493,27 +1494,35 @@
                         android:id="@+id/description_label"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:editable="false"
                         android:paddingLeft="10dp"
                         android:text="Description"
                         android:textColor="@color/colorPrimary"
-                        android:textSize="14sp"
-                        android:editable="false"
-                        android:background="@android:color/transparent"/>
+                        android:textSize="14sp" />
 
                     <EditText
                         android:id="@+id/description_et"
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:background="@drawable/custom_edit_text2"
                         android:gravity="start"
+                        android:maxLength="200"
+                        android:minHeight="100dp"
+                        android:paddingBottom="10dp"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
                         android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
-                        android:textSize="14sp"
-                        android:maxLength="80"
-                        />
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="8dp"
+                        android:text="Max Characters 200"
+                        android:textSize="10sp" />
 
                 </LinearLayout>
 
@@ -1538,20 +1547,21 @@
                         android:orientation="horizontal">
 
 
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:layout_marginRight="5dp">
+                            android:orientation="vertical">
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Form A Front"
-                                android:textSize="10sp"
                                 android:gravity="center"
-                                android:paddingBottom="5dp"/>
+                                android:paddingBottom="5dp"
+                                android:text="Form A Front"
+                                android:textSize="10sp" />
+
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="80dp"
@@ -1564,38 +1574,40 @@
                                     android:layout_height="match_parent"
                                     android:layout_centerInParent="true"
                                     android:scaleType="centerCrop"
-                                    android:visibility="gone"/>
+                                    android:visibility="gone" />
 
                                 <ImageView
                                     android:id="@+id/attachement_btn1"
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
-                                    android:src="@drawable/ic_add_a_photo_black_24dp"
-                                    android:layout_centerInParent="true"/>
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/ic_add_a_photo_black_24dp" />
 
                             </RelativeLayout>
+
                             <LinearLayout
                                 android:id="@+id/image1_delete"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                android:visibility="gone"
                                 android:paddingLeft="5dp"
-                                android:paddingTop="5dp">
+                                android:paddingTop="5dp"
+                                android:visibility="gone">
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/ic_delete_forever_black_24dp"
-                                    android:layout_gravity="center_horizontal" />
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/ic_delete_forever_black_24dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Remove"
-                                    android:textSize="12sp"
                                     android:layout_gravity="center_vertical"
-                                    android:textColor="@android:color/holo_red_light"/>
+                                    android:text="Remove"
+                                    android:textColor="@android:color/holo_red_light"
+                                    android:textSize="12sp" />
                             </LinearLayout>
-
 
 
                         </LinearLayout>
@@ -1604,16 +1616,18 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:layout_marginRight="5dp">
+                            android:orientation="vertical">
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Form A Back"
-                                android:textSize="10sp"
                                 android:gravity="center"
-                                android:paddingBottom="5dp"/>
+                                android:paddingBottom="5dp"
+                                android:text="Form A Back"
+                                android:textSize="10sp" />
+
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="80dp"
@@ -1626,7 +1640,7 @@
                                     android:layout_height="match_parent"
                                     android:layout_centerInParent="true"
                                     android:scaleType="fitXY"
-                                    android:visibility="gone"/>
+                                    android:visibility="gone" />
 
                                 <ImageView
                                     android:id="@+id/attachement_btn2"
@@ -1635,26 +1649,29 @@
                                     android:layout_centerInParent="true"
                                     android:src="@drawable/ic_add_a_photo_black_24dp" />
                             </RelativeLayout>
+
                             <LinearLayout
                                 android:id="@+id/image2_delete"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                android:visibility="gone"
                                 android:paddingLeft="5dp"
-                                android:paddingTop="5dp">
+                                android:paddingTop="5dp"
+                                android:visibility="gone">
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/ic_delete_forever_black_24dp"
-                                    android:layout_gravity="center_horizontal" />
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/ic_delete_forever_black_24dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Remove"
-                                    android:textSize="12sp"
                                     android:layout_gravity="center_vertical"
-                                    android:textColor="@android:color/holo_red_light"/>
+                                    android:text="Remove"
+                                    android:textColor="@android:color/holo_red_light"
+                                    android:textSize="12sp" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1662,16 +1679,18 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
                             android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:layout_marginRight="5dp">
+                            android:orientation="vertical">
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Vehicle Front"
-                                android:textSize="10sp"
                                 android:gravity="center"
-                                android:paddingBottom="5dp"/>
+                                android:paddingBottom="5dp"
+                                android:text="Vehicle Front"
+                                android:textSize="10sp" />
+
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="80dp"
@@ -1684,7 +1703,7 @@
                                     android:layout_height="match_parent"
                                     android:layout_centerInParent="true"
                                     android:scaleType="fitXY"
-                                    android:visibility="gone"/>
+                                    android:visibility="gone" />
 
                                 <ImageView
                                     android:id="@+id/attachement_btn3"
@@ -1693,26 +1712,29 @@
                                     android:layout_centerInParent="true"
                                     android:src="@drawable/ic_add_a_photo_black_24dp" />
                             </RelativeLayout>
+
                             <LinearLayout
                                 android:id="@+id/image3_delete"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                android:visibility="gone"
                                 android:paddingLeft="5dp"
-                                android:paddingTop="5dp">
+                                android:paddingTop="5dp"
+                                android:visibility="gone">
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/ic_delete_forever_black_24dp"
-                                    android:layout_gravity="center_horizontal" />
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/ic_delete_forever_black_24dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Remove"
-                                    android:textSize="12sp"
                                     android:layout_gravity="center_vertical"
-                                    android:textColor="@android:color/holo_red_light"/>
+                                    android:text="Remove"
+                                    android:textColor="@android:color/holo_red_light"
+                                    android:textSize="12sp" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1720,15 +1742,17 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_weight="1">
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Vehicle Back"
-                                android:textSize="10sp"
                                 android:gravity="center"
-                                android:paddingBottom="5dp"/>
+                                android:paddingBottom="5dp"
+                                android:text="Vehicle Back"
+                                android:textSize="10sp" />
+
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="80dp"
@@ -1741,7 +1765,7 @@
                                     android:layout_height="match_parent"
                                     android:layout_centerInParent="true"
                                     android:scaleType="fitXY"
-                                    android:visibility="gone"/>
+                                    android:visibility="gone" />
 
                                 <ImageView
                                     android:id="@+id/attachement_btn4"
@@ -1756,24 +1780,25 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                android:visibility="gone"
                                 android:paddingLeft="5dp"
-                                android:paddingTop="5dp">
+                                android:paddingTop="5dp"
+                                android:visibility="gone">
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/ic_delete_forever_black_24dp"
-                                    android:layout_gravity="center_horizontal" />
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/ic_delete_forever_black_24dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Remove"
-                                    android:textSize="12sp"
                                     android:layout_gravity="center_vertical"
-                                    android:textColor="@android:color/holo_red_light"/>
+                                    android:text="Remove"
+                                    android:textColor="@android:color/holo_red_light"
+                                    android:textSize="12sp" />
                             </LinearLayout>
                         </LinearLayout>
-
 
 
                     </LinearLayout>
@@ -1788,16 +1813,17 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
+                            android:layout_marginRight="5dp"
                             android:layout_weight="1"
-                            android:layout_marginRight="5dp">
+                            android:orientation="vertical">
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Vehicle Left"
-                                android:textSize="10sp"
                                 android:gravity="center"
-                                android:paddingBottom="5dp"/>
+                                android:paddingBottom="5dp"
+                                android:text="Vehicle Left"
+                                android:textSize="10sp" />
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -1810,7 +1836,7 @@
                                     android:layout_height="match_parent"
                                     android:layout_centerInParent="true"
                                     android:scaleType="fitXY"
-                                    android:visibility="gone"/>
+                                    android:visibility="gone" />
 
                                 <ImageView
                                     android:id="@+id/attachement_btn5"
@@ -1826,39 +1852,42 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                android:visibility="gone"
                                 android:paddingLeft="5dp"
-                                android:paddingTop="5dp">
+                                android:paddingTop="5dp"
+                                android:visibility="gone">
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/ic_delete_forever_black_24dp"
-                                    android:layout_gravity="center_horizontal" />
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/ic_delete_forever_black_24dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Remove"
-                                    android:textSize="12sp"
                                     android:layout_gravity="center_vertical"
-                                    android:textColor="@android:color/holo_red_light"/>
+                                    android:text="Remove"
+                                    android:textColor="@android:color/holo_red_light"
+                                    android:textSize="12sp" />
                             </LinearLayout>
                         </LinearLayout>
-
 
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
+                            android:layout_marginRight="5dp"
                             android:layout_weight="1"
-                            android:layout_marginRight="5dp">
+                            android:orientation="vertical">
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Vehicle Right"
-                                android:textSize="10sp"
                                 android:gravity="center"
-                                android:paddingBottom="5dp"/>
+                                android:paddingBottom="5dp"
+                                android:text="Vehicle Right"
+                                android:textSize="10sp" />
+
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="80dp"
@@ -1871,7 +1900,7 @@
                                     android:layout_height="match_parent"
                                     android:layout_centerInParent="true"
                                     android:scaleType="fitXY"
-                                    android:visibility="gone"/>
+                                    android:visibility="gone" />
 
                                 <ImageView
                                     android:id="@+id/attachement_btn6"
@@ -1880,26 +1909,29 @@
                                     android:layout_centerInParent="true"
                                     android:src="@drawable/ic_add_a_photo_black_24dp" />
                             </RelativeLayout>
+
                             <LinearLayout
                                 android:id="@+id/image6_delete"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                android:visibility="gone"
                                 android:paddingLeft="5dp"
-                                android:paddingTop="5dp">
+                                android:paddingTop="5dp"
+                                android:visibility="gone">
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/ic_delete_forever_black_24dp"
-                                    android:layout_gravity="center_horizontal" />
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/ic_delete_forever_black_24dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Remove"
-                                    android:textSize="12sp"
                                     android:layout_gravity="center_vertical"
-                                    android:textColor="@android:color/holo_red_light"/>
+                                    android:text="Remove"
+                                    android:textColor="@android:color/holo_red_light"
+                                    android:textSize="12sp" />
                             </LinearLayout>
 
                         </LinearLayout>
@@ -1907,16 +1939,18 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
+                            android:layout_marginRight="5dp"
                             android:layout_weight="1"
-                            android:layout_marginRight="5dp">
+                            android:orientation="vertical">
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Vehicle Interior"
-                                android:textSize="10sp"
                                 android:gravity="center"
-                                android:paddingBottom="5dp"/>
+                                android:paddingBottom="5dp"
+                                android:text="Vehicle Interior"
+                                android:textSize="10sp" />
+
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="80dp"
@@ -1929,7 +1963,7 @@
                                     android:layout_height="match_parent"
                                     android:layout_centerInParent="true"
                                     android:scaleType="fitXY"
-                                    android:visibility="gone"/>
+                                    android:visibility="gone" />
 
                                 <ImageView
                                     android:id="@+id/attachement_btn7"
@@ -1938,26 +1972,29 @@
                                     android:layout_centerInParent="true"
                                     android:src="@drawable/ic_add_a_photo_black_24dp" />
                             </RelativeLayout>
+
                             <LinearLayout
                                 android:id="@+id/image7_delete"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                android:visibility="gone"
                                 android:paddingLeft="5dp"
-                                android:paddingTop="5dp">
+                                android:paddingTop="5dp"
+                                android:visibility="gone">
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/ic_delete_forever_black_24dp"
-                                    android:layout_gravity="center_horizontal" />
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/ic_delete_forever_black_24dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Remove"
-                                    android:textSize="12sp"
                                     android:layout_gravity="center_vertical"
-                                    android:textColor="@android:color/holo_red_light"/>
+                                    android:text="Remove"
+                                    android:textColor="@android:color/holo_red_light"
+                                    android:textSize="12sp" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1965,15 +2002,17 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_weight="1">
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Optional/Driver"
-                                android:textSize="10sp"
                                 android:gravity="center"
-                                android:paddingBottom="5dp"/>
+                                android:paddingBottom="5dp"
+                                android:text="Optional/Driver"
+                                android:textSize="10sp" />
+
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="80dp"
@@ -1986,7 +2025,7 @@
                                     android:layout_height="match_parent"
                                     android:layout_centerInParent="true"
                                     android:scaleType="fitXY"
-                                    android:visibility="gone"/>
+                                    android:visibility="gone" />
 
                                 <ImageView
                                     android:id="@+id/attachement_btn8"
@@ -1995,29 +2034,31 @@
                                     android:layout_centerInParent="true"
                                     android:src="@drawable/ic_add_a_photo_black_24dp" />
                             </RelativeLayout>
+
                             <LinearLayout
                                 android:id="@+id/image8_delete"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                android:visibility="gone"
                                 android:paddingLeft="5dp"
-                                android:paddingTop="5dp">
+                                android:paddingTop="5dp"
+                                android:visibility="gone">
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/ic_delete_forever_black_24dp"
-                                    android:layout_gravity="center_horizontal" />
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/ic_delete_forever_black_24dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Remove"
-                                    android:textSize="12sp"
                                     android:layout_gravity="center_vertical"
-                                    android:textColor="@android:color/holo_red_light"/>
+                                    android:text="Remove"
+                                    android:textColor="@android:color/holo_red_light"
+                                    android:textSize="12sp" />
                             </LinearLayout>
                         </LinearLayout>
-
 
 
                     </LinearLayout>
