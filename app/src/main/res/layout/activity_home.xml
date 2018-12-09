@@ -22,7 +22,8 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/home_bg" />
+                android:src="@drawable/home_bg"
+                android:scaleType="centerCrop"/>
 
             <ImageView
                 android:id="@+id/excise_logo"
@@ -41,12 +42,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="16dp"
                 android:text="@string/excise_nmotor_vehicle_n_seize_amp_confiscation"
                 android:textSize="19sp"
-                android:textColor="#fff"
+                android:textColor="#ffffff"
                 android:gravity="center"
-                android:fontFamily="sans-serif"
+                android:textAllCaps="true"
                 android:layout_below="@+id/excise_logo" />
 
 
