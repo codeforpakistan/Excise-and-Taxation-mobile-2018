@@ -26,10 +26,12 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.animation.Animation;
@@ -161,6 +163,7 @@ public class FormBActivity extends AppCompatActivity implements View.OnClickList
 
     StateProgressBar formb_stat_progress;
     ProgressBar formb_access_progress;
+    Toolbar mToolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -170,6 +173,11 @@ public class FormBActivity extends AppCompatActivity implements View.OnClickList
         loadFormbAccessories();
     }
     private void setUi() {
+        mToolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("Form B");
         Intent intent = getIntent();
         veh_id = intent.getStringExtra("vehicle_id");
         userSharedPreferences = getApplicationContext().getSharedPreferences(USER_PREF, Context.MODE_PRIVATE);
@@ -575,7 +583,7 @@ public class FormBActivity extends AppCompatActivity implements View.OnClickList
                                             mAwesomeProgressDialog.hide();
                                             new AwesomeSuccessDialog(FormBActivity.this)
                                                     .setTitle("Success")
-                                                    .setMessage("You have submited the form successfully")
+                                                    .setMessage("You have submitted the form successfully")
                                                     .setColoredCircle(R.color.dialogSuccessBackgroundColor)
                                                     .setDialogIconAndColor(R.drawable.ic_success, R.color.white)
                                                     .setCancelable(false)
@@ -1826,5 +1834,28 @@ public class FormBActivity extends AppCompatActivity implements View.OnClickList
                 })
                 .setNegativeButton("No", null)
                 .show();
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                // todo: goto back activity from here
+                new AlertDialog.Builder(this)
+                        .setMessage("Are you sure you want to cancel form")
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                finish();
+                            }
+
+                        })
+                        .setNegativeButton("No", null)
+                        .show();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

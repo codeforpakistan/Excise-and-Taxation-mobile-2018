@@ -152,7 +152,6 @@ public class OneFragment extends Fragment {
                                             @Override
                                             public void run() {
 
-                                        Log.e("OnClick", "onItemClick: "+item.getVehicleImages());
                                         Intent intent = new Intent(getActivity(), FormBDetailsActivity.class);
                                         Bundle args = new Bundle();
                                         args.putString("form_no", item.getFormserialno());
@@ -322,7 +321,7 @@ public class OneFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        loadApprovedList();
+        //loadApprovedList();
     }
 
     @Subscribe

@@ -76,9 +76,9 @@
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".javaClasses.FormBActivity"
-            android:label="@string/form_b"
             android:parentActivityName=".javaClasses.FormBDetailsActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".javaClasses.WhmActivity"
             android:screenOrientation="portrait"
@@ -86,9 +86,8 @@
 
         <activity android:name=".javaClasses.FormBDetailsActivity"
             android:parentActivityName=".javaClasses.WhmActivity"
-            android:label="Details"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait"/>
+            android:label="Form A Details"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
