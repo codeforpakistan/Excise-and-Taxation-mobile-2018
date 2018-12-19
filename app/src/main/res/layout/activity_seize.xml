@@ -84,7 +84,7 @@
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
                         android:textSize="14sp"
-                        android:nextFocusDown="@id/driver_name_et"/>
+                        android:nextFocusDown="@id/seize_address_et"/>
 
                 </LinearLayout>
 
@@ -205,7 +205,10 @@
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
                         android:spinnerMode="dialog"
-                        android:textSize="14sp"/>
+                        android:textSize="14sp"
+                        android:inputType="text"
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@id/driver_name_et"/>
 
 
                 </LinearLayout>
