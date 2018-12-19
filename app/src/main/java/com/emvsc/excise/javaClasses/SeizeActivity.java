@@ -627,7 +627,7 @@ public class SeizeActivity extends AppCompatActivity implements View.OnClickList
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.seize_finish) {
+        /*if (id == R.id.seize_finish) {
             new AlertDialog.Builder(this)
                     .setMessage("Are you sure you want to cancel form?")
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener()
@@ -641,7 +641,7 @@ public class SeizeActivity extends AppCompatActivity implements View.OnClickList
                     .setNegativeButton("No", null)
                     .show();
             return true;
-        }
+        }*/
 
         return super.onOptionsItemSelected(item);
     }
@@ -1700,7 +1700,7 @@ public class SeizeActivity extends AppCompatActivity implements View.OnClickList
                             mAwesomeProgressDialog.hide();
                             new AwesomeSuccessDialog(SeizeActivity.this)
                                     .setTitle("Success")
-                                    .setMessage("You have submited the form successfully")
+                                    .setMessage("You have submitted the form successfully")
                                     .setColoredCircle(R.color.dialogSuccessBackgroundColor)
                                     .setDialogIconAndColor(R.drawable.ic_success, R.color.white)
                                     .setCancelable(false)
