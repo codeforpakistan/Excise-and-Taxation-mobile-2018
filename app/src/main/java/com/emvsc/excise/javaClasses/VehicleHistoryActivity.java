@@ -439,7 +439,6 @@ public class VehicleHistoryActivity extends AppCompatActivity {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-
                     vehicleHistoryAdapter = new VehicleHistoryAdapter(VehicleHistoryActivity.this, seizeHistoryList);
                     mRecyclerView.setAdapter(vehicleHistoryAdapter);
                     vehicleHistoryAdapter.notifyDataSetChanged();
@@ -452,6 +451,7 @@ public class VehicleHistoryActivity extends AppCompatActivity {
                 public void run() {
                     seizeHistoryList.clear();
                     no_record_layout.setVisibility(View.VISIBLE);
+                    sync_btn.setVisibility(View.GONE);
                     }
             });
         }
@@ -484,11 +484,12 @@ public class VehicleHistoryActivity extends AppCompatActivity {
                             mAwesomeProgressDialog.hide();
                             Snackbar snackbar = Snackbar
                                     .make(veh_history, "Data Sync Successfully", Snackbar.LENGTH_SHORT);
+                            View view = snackbar.getView();
+                            view.setBackgroundColor(getResources().getColor(R.color.dialogSuccessBackgroundColor));
                             snackbar.show();
                             mDbHelper.deleteSeizeData(seizeID);
                             vehicleHistoryAdapter.notifyDataSetChanged();
                             loadData();
-                            Toast.makeText(VehicleHistoryActivity.this, "Data Sync Successfully", Toast.LENGTH_SHORT).show();
 
 
 
@@ -499,7 +500,11 @@ public class VehicleHistoryActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             mAwesomeProgressDialog.hide();
-                            Toast.makeText(VehicleHistoryActivity.this, "Failed to syncing data", Toast.LENGTH_SHORT).show();
+                            Snackbar snackbar = Snackbar
+                                    .make(veh_history, "Failed to syncing data", Snackbar.LENGTH_SHORT);
+                            View view = snackbar.getView();
+                            view.setBackgroundColor(getResources().getColor(R.color.dialogErrorBackgroundColor));
+                            snackbar.show();
 
                         }
                     });
@@ -515,7 +520,11 @@ public class VehicleHistoryActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         mAwesomeProgressDialog.hide();
-                        Toast.makeText(VehicleHistoryActivity.this, "Failed to syncing data", Toast.LENGTH_SHORT).show();
+                        Snackbar snackbar = Snackbar
+                                .make(veh_history, "Failed to syncing data", Snackbar.LENGTH_SHORT);
+                        View view = snackbar.getView();
+                        view.setBackgroundColor(getResources().getColor(R.color.dialogErrorBackgroundColor));
+                        snackbar.show();
 
                     }
                 });
@@ -527,8 +536,6 @@ public class VehicleHistoryActivity extends AppCompatActivity {
 
 
     }
-
-
     @NonNull
     private RequestBody createPartFromString(String val) {
         return RequestBody.create(okhttp3.MultipartBody.FORM,  val);

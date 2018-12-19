@@ -215,7 +215,7 @@ public class TwoFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        loadInspectorList();
+        //loadInspectorList();
     }
     @Subscribe
     public void RefreshEvent(RefreshTab1 event){

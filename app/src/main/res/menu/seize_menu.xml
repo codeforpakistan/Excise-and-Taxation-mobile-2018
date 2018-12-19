@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
+    <!--<item
         android:id="@+id/seize_finish"
         android:orderInCategory="100"
         android:icon="@drawable/ic_cancel_white_24dp"
         app:showAsAction="always"
         android:visible="true"
-        android:title=""/>
+        android:title="" />-->
 
 </menu>

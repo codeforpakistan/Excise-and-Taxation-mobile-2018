@@ -3,8 +3,8 @@
     <string name="password_hint">Password</string>
     <string name="excise_nmotor_vehicle_n_seize_amp_confiscation">Excise  Motor Vehicle  \n Seizure &amp; Confiscation System</string>
     <string name="seize_vehicle">Seize Vehicle</string>
-    <string name="vehicle_history">Seize History</string>
-    <string name="seize_history">Seize History</string>
+    <string name="vehicle_history">Pending Uploads</string>
+    <string name="seize_history">Pending Uploads</string>
     <string name="title_activity_whm">WhmActivity</string>
     <string name="tab_text_1">Awaiting</string>
     <string name="tab_text_2">Checked In</string>

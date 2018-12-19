@@ -146,9 +146,16 @@ public class FormBDetailsActivity extends AppCompatActivity implements View.OnCl
         whm_description.setText(args.getString("description"));
 
         whm_accessories = findViewById(R.id.whm_accessories);
-        mFormbAccessoriesAdapter = new FormbAccessoriesAdapter(this, accessList);
-        whm_accessories.setAdapter(mFormbAccessoriesAdapter);
-        Log.e(TAG, "accessList size: "+accessList.size() );
+        if (accessList.size() == 0){
+            TextView no_accessories = findViewById(R.id.no_accessories);
+            no_accessories.setVisibility(View.VISIBLE);
+            whm_accessories.setVisibility(View.GONE);
+        }else {
+            whm_accessories.setVisibility(View.VISIBLE);
+            mFormbAccessoriesAdapter = new FormbAccessoriesAdapter(this, accessList);
+            whm_accessories.setAdapter(mFormbAccessoriesAdapter);
+        }
+
 
         whm_driver_name = findViewById(R.id.whm_driver_name);
         whm_driver_name.setText(args.get("driver_name").toString());
@@ -231,9 +238,9 @@ public class FormBDetailsActivity extends AppCompatActivity implements View.OnCl
             String address = addresses.get(0).getAddressLine(0); // If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
             String knownName = addresses.get(0).getFeatureName(); // Only if available else return NULL
             if (address.equals("") || address.equals(null)){
-                whm_location.setText("Physical Address: "+knownName);
+                whm_location.setText("GPS Address: "+knownName);
             }else {
-                whm_location.setText("Physical Address: "+address);
+                whm_location.setText("GPS Address: "+address);
             }
         } catch (IOException e) {
             Log.e("IOException", ""+e.toString());

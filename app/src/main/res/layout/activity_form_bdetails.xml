@@ -175,8 +175,6 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:layout_gravity="center_vertical"
                     android:textStyle="bold"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp"
                     android:gravity="center_vertical"
                     android:drawableRight="@drawable/ic_expand_more_black_24dp"/>
                 <com.github.aakira.expandablelayout.ExpandableLinearLayout
@@ -187,7 +185,6 @@
                     app:ael_expanded="false"
                     app:ael_interpolator="fastOutSlowIn"
                     android:orientation="vertical"
-                    android:layout_marginTop="8dp"
                     android:paddingRight="8dp"
                     android:paddingLeft="8dp">
                     <LinearLayout
@@ -566,8 +563,6 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:gravity="center_vertical"
                     android:textStyle="bold"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp"
                     android:drawableRight="@drawable/ic_expand_more_black_24dp" />
                 <com.github.aakira.expandablelayout.ExpandableLinearLayout
                     android:id="@+id/expandableLayout2"
@@ -577,6 +572,13 @@
                     app:ael_expanded="false"
                     app:ael_interpolator="fastOutSlowIn"
                     android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/no_accessories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No accessories mention "
+                        android:visibility="gone"
+                        android:paddingBottom="8dp"/>
                     <com.emvsc.excise.utilClasses.NonScrollListView
                         android:id="@+id/whm_accessories"
                         android:layout_width="match_parent"
@@ -584,7 +586,8 @@
                         android:divider="@null"
                         android:dividerHeight="5sp"
                         android:paddingRight="8dp"
-                        android:paddingLeft="8dp">
+                        android:paddingLeft="8dp"
+                        android:paddingBottom="8dp">
 
                     </com.emvsc.excise.utilClasses.NonScrollListView>
                 </com.github.aakira.expandablelayout.ExpandableLinearLayout>
@@ -612,8 +615,6 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:gravity="center_vertical"
                     android:textStyle="bold"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp"
                     android:drawableRight="@drawable/ic_expand_more_black_24dp" />
                 <com.github.aakira.expandablelayout.ExpandableLinearLayout
                     android:id="@+id/expandableLayout3"
